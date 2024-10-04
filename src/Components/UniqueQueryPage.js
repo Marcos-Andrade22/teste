@@ -1,3 +1,5 @@
+import axios from "axios";
+
 const UniqueQueryPage = () => {
   const consultarUnico = (id) => {
     axios.get(`http://localhost:3005/alunos/${id}`).then((resultado) => {
@@ -7,7 +9,10 @@ const UniqueQueryPage = () => {
   
   return (
     <>
-      <h1>UniqueQueryPage</h1>
+      <h1>Listar um usuário:</h1>
+      <button onClick={consultarUnico}>Consultar Único</button>
     </>
   );
 };
+
+export default UniqueQueryPage;
